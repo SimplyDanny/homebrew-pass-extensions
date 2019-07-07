@@ -1,14 +1,14 @@
 class PassUpdate < Formula
   desc "Pass extension that provides an easy flow for updating passwords"
   homepage "https://github.com/roddhjav/pass-update"
-  url "https://github.com/roddhjav/pass-update/archive/v2.0.tar.gz"
-  sha256 "3c994d0776fc8958120e604005423b7969db5dc4e30ebf90cd397b7a3b4706f1"
+  url "https://github.com/roddhjav/pass-update/archive/v2.1.tar.gz"
+  sha256 "2b0022102238e022e7ee945b7622f4c270810cda46508084fcb193582aafaf6f"
   head "https://github.com/roddhjav/pass-update.git"
 
   depends_on "pass"
 
   def install
-    system %(make PREFIX=#{prefix} install)
+    system "make", "PREFIX=#{prefix}", "BASHCOMPDIR=#{bash_completion}", "install"
   end
 
   @@enable_extensions = "PASSWORD_STORE_ENABLE_EXTENSIONS=true"
