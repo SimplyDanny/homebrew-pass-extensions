@@ -1,6 +1,6 @@
 require File.expand_path("../Homebrew/PassExtensionFormula", __dir__)
 
-class PassCsv < Formula
+class PassCsv < PassExtensionFormula
   desc "A pass extension to generate a CSV summary from key-value pairs"
   homepage "https://github.com/lahr/pass-csv"
   url "https://github.com/lahr/pass-csv/archive/v1.2.tar.gz"
@@ -17,7 +17,7 @@ class PassCsv < Formula
     csv_cmd = define_command "csv"
     execute_test do
       system %(#{csv_cmd} key1 > output.txt)
-      assert_equal "\"name\",\"key1\"\n\"foo/bar\",\"-\"\n", File.read("output.txt")
+      assert_equal %("name","key1"\n"#{@@example_password}","-"\n), File.read("output.txt")
     end
   end
 end
