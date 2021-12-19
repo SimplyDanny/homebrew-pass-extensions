@@ -3,8 +3,8 @@ require File.expand_path("../Homebrew/PassExtensionFormula", __dir__)
 class PassClip < PassExtensionFormula
   desc "Pass extension that lets you quickly copy to clipboard passwords using fzf or rofi"
   homepage "https://github.com/ibizaman/pass-clip"
-  url "https://github.com/ibizaman/pass-clip/archive/v0.2.tar.gz"
-  sha256 "f3646954057dfe7fefd998eb95e3d9d2f56119bcd366f8ecb768c0ff76b264d6"
+  url "https://github.com/ibizaman/pass-clip/archive/v0.3.tar.gz"
+  sha256 "da07f6ad92901f960e6afe6324fc2fc86b4ce23f20cbe041ec19a1c7b1490009"
   head "https://github.com/ibizaman/pass-clip.git"
 
   depends_on "pass"
